@@ -1,0 +1,77 @@
+{
+  "baseurl" :
+  {
+    "local" : "https://bpginteractive.com/dev/equalizer-wdys/",
+    "dev" : "https://bpginteractive.com/dev/equalizer-wdys/",
+    "stage" : "https://bpginteractive.com/dev/equalizer-wdys/",
+    "live" : "https://bpginteractive.com/dev/equalizer-wdys/"
+  },
+
+  "footer":
+  {
+    "sonyrewards":"http://www.sonyrewards.com/en/home/welcome",
+    "filmratings":"http://filmratings.com/",
+    "mpaa":"http://www.mpaa.org/",
+    "tos":"http://www.sonypictures.com/corp/tos.html",
+    "privacy":"http://www.sonypictures.com/corp/privacy.html"
+    },
+
+  "projectlist" : 
+  [
+    {
+      "title": "VIKINGS ULTIMATE REALITY EXPERIENCE",
+      "type": "flash",
+      "roles": "animation, development",
+      "client": "bpg, A&E",
+      "detail":
+      [
+        {
+          "description":"VIKINGS ULTIMATE REALITY EXPERIENCE - Get a 3D look at the Vikings cast of characters. Built to complement the mobile app, users can view 3d rotations of the characters and view videos that reveal more about the characters.",
+          "images": 
+          [
+            {
+              "asset": "tableau.jpg"
+            },
+            {
+              "asset": "rollover.png"
+            },
+            {
+              "asset": "ragnar_rotation.png"
+            },
+            {
+              "main":"true",
+              "asset": "ragnarVideoDetail.png"
+            }
+          ]
+        }
+      ]   
+    },
+
+    {
+      "title": "At The Heart of Otis",
+      "type": "flash",
+      "roles": "concept, development, animation",
+      "client": "otis college of art and design, pprwrkstudio",
+      "detail":
+      [
+        {
+          "description":"At The Heart Of Otis - An interactive call to raise funds for the school. Users could share their stories about the faculty and their school experience. Concepted and executed in collaboaration with pprwrk studio",
+          "images": 
+          [
+            {
+              "main":"true",
+              "asset": "entry.png"
+            },
+            {
+              "asset": "uiDetail.png"
+            },
+            {
+              "asset": "quote.png"
+            }
+          ]
+        }
+      ]   
+    }
+    
+  ]
+}

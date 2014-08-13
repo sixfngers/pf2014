@@ -132,22 +132,27 @@ textarea {
 .tile-wrapper
 {
     width: 100%;
-    max-width: 960px;
-    min-width: 640px;
+    max-width: 1600px;
+    min-width: inherit;
     margin:100px auto;
 }
 
 
 .project-tile
 {
-    width:220px;
+    width:30%;
     text-align: left;
     background-color: #FF5F12;
     color:#464646;
-    float:left;
     margin:8px 8px 8px 8px;
+    display: inline-block;
+    vertical-align:top;
+    overflow: hidden;
+    cursor: pointer;
 
 }
+
+.shadowbox {    border: 2px solid #ffffff;    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);}
 
 .upper
 {
@@ -195,7 +200,24 @@ textarea {
 }
 
 
+.project-detail
+{
+    width: inherit;
+}
 
+.carousel-wrapper
+{
+    width:960px;
+}
+
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 
 
@@ -285,9 +307,35 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+
+@media only screen and (max-width: 799px) {
+     /*Style adjustments for viewports that meet the condition*/ 
+    .project-tile
+    {
+        width:40%;
+        margin:8px;
+    }
 }
+
+@media only screen and (min-width: 800px) and (max-width: 1359px) {
+     /*Style adjustments for viewports that meet the condition*/ 
+    .project-tile
+    {
+        width:30%;
+        margin:16px;
+
+    }
+}
+
+@media only screen and (min-width: 1360px) and (max-width: 4000px) {
+     /*Style adjustments for viewports that meet the condition*/ 
+    .project-tile
+    {
+        width:20%;
+        margin:30px;
+    }
+}
+
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),

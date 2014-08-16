@@ -115,8 +115,6 @@ textarea {
     width: 100%;
     min-width: 640px;
     /*max-width: 1080px;*/
-
-
 }
 
 
@@ -125,12 +123,65 @@ textarea {
 .site-wrapper .header-image-wrapper img,
 .tiles
 {
+    min-width: inherit;
     width: inherit;
+}
+
+.site-wrapper header
+{
+    position: relative;
+}
+
+
+.header-image-wrapper
+{
+    position: relative;
+    
+}
+
+
+
+.grayscale-filter
+{
+    -webkit-filter:grayscale(1);
+    filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+    filter:gray;
+}
+
+header h2
+{
+    position: absolute;
+    z-index: 5;
+    color:#fcf9f0;
+    /*opacity:0;*/
+    font-size:3.25em;
+    line-height:1.2em;
+    margin:0 auto;
+    text-align:center;
+    text-shadow:0 1px 0 rgba(0,0,0,0.3);
+    width: 100%;
+    top:40%;
+}
+
+header .fill-overlay
+{
+    position: absolute;
+    z-index: 3;
+    top:0;
+    opacity: .8;
+}
+
+header .fill
+{
+    width:1600px;
+    height:400px;
+    opacity: .3;
 }
 
 
 .tile-wrapper
 {
+    /*display:none;*/
     width: 100%;
     max-width: 1600px;
     min-width: inherit;
@@ -141,28 +192,35 @@ textarea {
 .project-tile
 {
     width:30%;
+    max-width: 230px;
     text-align: left;
-    background-color: #FF5F12;
-    color:#464646;
+    /*background-color: #FF5F12;*/
+    /*background-color:#d12127;*/
+    background-color: #5dbc50;
+    color:#fcf9f0;
     margin:8px 8px 8px 8px;
     display: inline-block;
     vertical-align:top;
     overflow: hidden;
     cursor: pointer;
 
+
+    -webkit-border-top-right-radius: 32px;
+    -moz-border-radius-topright: 32px;
+    border-top-right-radius: 32px;
 }
 
-.shadowbox {    border: 2px solid #ffffff;    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);}
+.shadowbox {    border: 2px solid #ffffff;    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);}
 
-.upper
+.project-tile .upper
 {
     position: relative;
     width:100%;
-    height: 260px;
+    height: 230px;
     overflow: hidden;
 }
 
-.upper img
+.project-tile .upper img
 {
     height: 100%;
     background-position: center;
@@ -176,7 +234,7 @@ textarea {
     -ms-transform: translateY(-50%) translateX(-50%);
 }
 
-.lower
+.project-tile .lower
 {
     position: relative;
     height:120px;
@@ -194,6 +252,23 @@ textarea {
     bottom: 0;
 }
 
+.project-link
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width:20px;
+    height:20px;
+    background-image: url(../img/live_link.png);
+    background-size: 100%;
+    opacity: .3;
+}
+
+.project-link:hover
+{
+    opacity: .6;
+}
+
 .project-roles
 {
     margin-bottom:8px;
@@ -202,7 +277,53 @@ textarea {
 
 .project-detail
 {
-    width: inherit;
+    width: 90%;
+    margin:100px auto;
+}
+
+.project-detail .full-image-wrapper
+{
+    margin-top: 8px; 
+}
+
+.project-description
+{
+    width:80%;
+    margin:0 auto;
+    color: #464646;
+    text-align: left;
+}
+
+.project-description .upper
+{
+    margin-bottom: 60px;
+}
+
+.project-description .lower
+{
+    font-size: .75em;
+}
+
+.project-description .project-roles div,
+.project-description .project-tech div
+{
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.project-description .project-roles
+{
+    width: 50%;
+}
+
+.project-description .tech
+{
+    width: 50%;
+}
+
+.project-description h2
+{
+    margin: 0
 }
 
 .carousel-wrapper
@@ -217,6 +338,54 @@ textarea {
   display: block;
   width: 100%;
   height: auto;
+}
+
+
+.full-image-wrapper
+{
+    width:100%;
+    margin: 0; 
+}
+
+.full-image-wrapper img
+{
+    width:100%;
+    height:auto;
+}
+
+.inline{
+    display: inline-block;
+}
+
+.col-50
+{
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+
+
+
+footer
+{
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+}
+
+footer .content-wrapper
+{
+    min-height: 30px;
+}
+
+.top-line
+{
+    width: 90%;
+    border-top: 1px solid #5dbc50;
+    margin:0 auto;
 }
 
 

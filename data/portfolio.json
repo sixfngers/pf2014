@@ -19,6 +19,7 @@
   "projectlist" : 
   [
     {
+      "project-id":"vikings",
       "title": "VIKINGS ULTIMATE REALITY EXPERIENCE",
       "type": "flash",
       "roles": "animation, development",
@@ -26,6 +27,7 @@
       "detail":
       [
         {
+          "title":"VIKINGS ULTIMATE REALITY EXPERIENCE"
           "description":"VIKINGS ULTIMATE REALITY EXPERIENCE - Get a 3D look at the Vikings cast of characters. Built to complement the mobile app, users can view 3d rotations of the characters and view videos that reveal more about the characters.",
           "images": 
           [
@@ -48,6 +50,7 @@
     },
 
     {
+      "project-id":"otis",
       "title": "At The Heart of Otis",
       "type": "flash",
       "roles": "concept, development, animation",

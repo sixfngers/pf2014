@@ -1,5 +1,4 @@
 $(document).ready(function() {
-<<<<<<< HEAD
 
   var carousel;
   var dataFile = "data/portfolio.json";
@@ -19,7 +18,7 @@ $(document).ready(function() {
 
   var _buildTiles = function()
   {
-    var template = 'Welcome! You are at <%= title %>';
+    // var template = 'Welcome! You are at <%= title %>';
     var template = '<div id="<%= pid %>" class="project-tile shadowbox">' + 
                       '<div class="clickable-tile">'+
                       '<div class="upper">'+
@@ -70,7 +69,7 @@ $(document).ready(function() {
           console.log('link', projectTemplate.link);
 
 
-          if(projectTemplate.link.length == 0)
+          if(projectTemplate.link.length === 0)
           {
             console.log($('#'+tile.id+' .project-link').addClass('hidden'));
           }
@@ -90,7 +89,7 @@ $(document).ready(function() {
       // console.log($(e.target).children(".live-link").attr('href'));
       window.open($(e.target).children(".live-link").attr('href'));
     });
-=======
+
     
 
 
@@ -108,38 +107,37 @@ $(document).ready(function() {
 
   $('.project-tile').hover( 
       function(){
-          $(this).children('.lower').children('.project-roles').animate({marginBottom:'0px'},'fast')
-          $(this).children('.upper').children('.tile-thumb').animate({height:'120%'},'slow')
-          TweenMax.to($(this), .5, {boxShadow:"2px 2px 2px rgba(0, 0, 0, .2);"});
+          $(this).children('.lower').children('.project-roles').animate({marginBottom:'0px'},'fast');
+          $(this).children('.upper').children('.tile-thumb').animate({height:'120%'},'slow');
+          TweenMax.to($(this), 0.5, {boxShadow:"2px 2px 2px rgba(0, 0, 0, .2);"});
       },
       function(){
-          $(this).children('.lower').children('.project-roles').animate({marginBottom:'8px'},'fast')
-          $(this).children('.upper').children('.tile-thumb').animate({height:'100%'},'slow')
-          TweenMax.to($(this), .5, {boxShadow:"2px 2px 2px rgba(0, 0, 0, 0);"});
+          $(this).children('.lower').children('.project-roles').animate({marginBottom:'8px'},'fast');
+          $(this).children('.upper').children('.tile-thumb').animate({height:'100%'},'slow');
+          TweenMax.to($(this), 0.5, {boxShadow:"2px 2px 2px rgba(0, 0, 0, 0);"});
   });
->>>>>>> b9515ce0ef7c08ccee8703ebd602c1f9a310f7a6
 
 
     $('.no-touch .project-tile').hover( 
         function(){
-            $(this).children('.clickable-tile').children('.lower').children('.project-roles').animate({marginBottom:'0px'},'fast')
-            $(this).children('.clickable-tile').children('.upper').children('.tile-thumb').animate({height:'120%'},'slow')
-            TweenMax.to($(this), .5, {boxShadow:"2px 2px 2px rgba(0, 0, 0, .2);"});
+            $(this).children('.clickable-tile').children('.lower').children('.project-roles').animate({marginBottom:'0px'},'fast');
+            $(this).children('.clickable-tile').children('.upper').children('.tile-thumb').animate({height:'120%'},'slow');
+            TweenMax.to($(this), 0.5, {boxShadow:"2px 2px 2px rgba(0, 0, 0, .2);"});
         },
         function(){
-            $(this).children('.clickable-tile').children('.lower').children('.project-roles').animate({marginBottom:'8px'},'fast')
-            $(this).children('.clickable-tile').children('.upper').children('.tile-thumb').animate({height:'100%'},'slow')
-            TweenMax.to($(this), .5, {boxShadow:"2px 2px 2px rgba(0, 0, 0, 0);"});
+            $(this).children('.clickable-tile').children('.lower').children('.project-roles').animate({marginBottom:'8px'},'fast');
+            $(this).children('.clickable-tile').children('.upper').children('.tile-thumb').animate({height:'100%'},'slow');
+            TweenMax.to($(this), 0.5, {boxShadow:"2px 2px 2px rgba(0, 0, 0, 0);"});
     });
 
     $('.back').click(function(){
       hideDetails();
     });
-  }
+  };
 
   var populateDetails = function(projectid)
   {
-    console.log("populateDetails "+projectid)
+    console.log("populateDetails "+projectid);
     var projectListObj = jsonObj.projectlist;
     var project;
     var projectDetail;
@@ -152,11 +150,11 @@ $(document).ready(function() {
             project = projectListObj[projectObj];  
             projectDetail = project.detail[0];
             break;
-          };
+          }
         }
     }
 
-    console.log("populateDetails "+projectDetail)
+    console.log("populateDetails "+projectDetail);
 
     hideHeaderText(project.header_text);
 
@@ -166,23 +164,23 @@ $(document).ready(function() {
     $(".header-bg-image").attr('src', project.header_image);
 
     setupCarousel(projectDetail.images);
-  }
+  };
 
   var hideTiles = function(projectid)
   {
      $("#bg-image").removeClass('grayscale-filter');
     console.log('hideTiles');
-    TweenMax.to($(".tiles"), .5, {css:{autoAlpha:0, display:'none'}, onComplete:showDetails, onCompleteParams:[projectid]});
-    TweenMax.to($(".fill-overlay"), .5, {css:{autoAlpha:0}, delay:.3});
+    TweenMax.to($(".tiles"), 0.5, {css:{autoAlpha:0, display:'none'}, onComplete:showDetails, onCompleteParams:[projectid]});
+    TweenMax.to($(".fill-overlay"), 0.5, {css:{autoAlpha:0}, delay:0.3});
 
-  }
+  };
 
   var showTiles = function()
   {
     console.log('showTiles');
-    TweenMax.to($(".tiles"), .5, {css:{autoAlpha:1, display:'block'}});
-    TweenMax.to($(".fill-overlay"), .5, {css:{autoAlpha:.8, onComplete:addGrayscaleFilter}});
-  }
+    TweenMax.to($(".tiles"), 0.5, {css:{autoAlpha:1, display:'block'}});
+    TweenMax.to($(".fill-overlay"), 0.5, {css:{autoAlpha:0.8, onComplete:addGrayscaleFilter}});
+  };
 
   var showDetails = function(projectid)
   {
@@ -190,15 +188,15 @@ $(document).ready(function() {
     console.log('showDetails '+projectid);
     $(".project-detail").removeClass('hidden');
 
-    TweenMax.to($(".project-detail"), .5, {css:{autoAlpha:1, display:'block'}, onComplete:resizeCarousel});
-  }
+    TweenMax.to($(".project-detail"), 0.5, {css:{autoAlpha:1, display:'block'}, onComplete:resizeCarousel});
+  };
 
   var hideDetails = function()
   {
     $(".header-bg-image").attr('src', "img/ab3-header-bg.jpg");
     console.log('hideDetails');
-    TweenMax.to($(".project-detail"), .5, {css:{autoAlpha:0, display:'none'}, onComplete:showTiles});
-  }
+    TweenMax.to($(".project-detail"), 0.5, {css:{autoAlpha:0, display:'none'}, onComplete:showTiles});
+  };
 
   var setupCarousel = function(imageList)
   {
@@ -208,7 +206,7 @@ $(document).ready(function() {
     //   //carousel.destroy();
     // }
 
-    var template = '<div class="item"><img src="<%= imgsrc %>"> </div>'
+    var template = '<div class="item"><img src="<%= imgsrc %>"> </div>';
     var data;
 
     var html = '';
@@ -236,7 +234,7 @@ $(document).ready(function() {
       autoplayTimeout:5000,
       controls:true
     });
-  }
+  };
 
   var hideHeaderText = function(updatedText)
   {
@@ -248,27 +246,27 @@ $(document).ready(function() {
       completeFuncParams = [updatedText];  
     }
 
-    console.log(updatedText)
+    console.log(updatedText);
     
-    TweenMax.to($("#header-text"), .3, {css:{autoAlpha:0, display:'none'}, onComplete:showHeaderText, onCompleteParams:[updatedText]});
-  }
+    TweenMax.to($("#header-text"), 0.3, {css:{autoAlpha:0, display:'none'}, onComplete:showHeaderText, onCompleteParams:[updatedText]});
+  };
 
   var showHeaderText = function(updatedText)
   {
-    console.log(updatedText)
+    console.log(updatedText);
     $("#header-text").text(updatedText);
-    TweenMax.to($("#header-text"), .3, {css:{autoAlpha:1, display:'block'}});
-  }
+    TweenMax.to($("#header-text"), 0.3, {css:{autoAlpha:1, display:'block'}});
+  };
 
   var addGrayscaleFilter = function()
   {
     $("#bg-image").addClass('grayscale-filter');
-  }
+  };
 
   var resizeCarousel = function()
   {
     console.log('resizeCarousel');
     $('.owl-carousel').data().owlCarousel.e._onResize();
-  }
+  };
 
 });

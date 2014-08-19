@@ -281,16 +281,11 @@ header .fill
     position: relative;
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b9515ce0ef7c08ccee8703ebd602c1f9a310f7a6
     -webkit-border-top-right-radius: 32px;
     -moz-border-radius-topright: 32px;
     border-top-right-radius: 32px;
 }
 
-<<<<<<< HEAD
 .clickable-tile
 {
     cursor: pointer;
@@ -354,10 +349,7 @@ header .fill
     background-image: url(../img/live_link.png);
     background-size: 100%;
     opacity: .3;
-<<<<<<< HEAD
     margin:8px;
-=======
->>>>>>> b9515ce0ef7c08ccee8703ebd602c1f9a310f7a6
 }
 
 .project-link:hover
@@ -397,20 +389,14 @@ header .fill
     margin-bottom: 60px;
 }
 
-<<<<<<< HEAD
 h1
 {
     color:#a1a194;
 }
 
-.project-description
-{
-    /*font-size: .75em;*/
-=======
 .project-description .lower
 {
     font-size: .75em;
->>>>>>> b9515ce0ef7c08ccee8703ebd602c1f9a310f7a6
 }
 
 .project-description .project-roles div,
@@ -477,7 +463,6 @@ h1
 }
 
 
-<<<<<<< HEAD
 .back
 {
     cursor: pointer;

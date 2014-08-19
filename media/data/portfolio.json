@@ -68,8 +68,8 @@
       "roles": "animation, development",
       "client": "bpg, A&E",
       "header_text": "A 3D experience brings the Vikings cast to life.",
-      "header_text_width": "60%",
-      "header_image": "media/images/headers/header-kumar-bg-450.jpg",
+      "header_text_width": "55%",
+      "header_image": "media/images/headers/header-vikings.jpg",
       "header_fill": "#ff0000",
       "header_fill_opacity": "#ff0000",
       "live_link": "http://www.history.com/shows/vikings/interactives/vikings-ultimate-reality-experience",
@@ -78,6 +78,8 @@
         {
           "title":"VIKINGS ULTIMATE REALITY EXPERIENCE",
           "description":"The audience gets a 3D look at the Vikings cast of characters. Built to complement the mobile app, users can view 3d rotations of the characters and view videos that reveal more about the characters.",
+          "roles":"Role: developer",
+          "tech":"Tech: as3, timeline and code animation, flash, facebook sharing integration",
           "images": 
           [
             {
@@ -99,6 +101,41 @@
     },
 
     {
+      "project_id":"getonup",
+      "title": "Can't Stop The Funk",
+      "thumb": "media/images/projects/vikings/ragnarVideoDetail.png",
+      "type": "flash",
+      "roles": "concept, development, animation",
+      "client": "otis college of art and design, pprwrkstudio",
+      "header_text": "Students share their college experiences on social media",
+      "header_text_width": "55%",
+      "header_image": "media/images/headers/header-otis.jpg",
+      "header_fill": "#ff0000",
+      "header_fill_opacity": "#ff0000",
+      "live_link": "",
+      "detail":
+      [
+        {
+          "title": "At The Heart of Otis",
+          "description":"An interactive call to raise funds for the school. Users could share their stories about the faculty and their school experience. Concepted and executed in collaboaration with pprwrk studio",
+          "images": 
+          [
+            {
+              "main":"true",
+              "asset": "media/images/projects/otisheart/entry.png"
+            },
+            {
+              "asset": "media/images/projects/otisheart/uiDetail.png"
+            },
+            {
+              "asset": "media/images/projects/otisheart/quote.png"
+            }
+          ]
+        }
+      ]   
+    },
+
+    {
       "project_id":"otis",
       "title": "At The Heart of Otis",
       "thumb": "media/images/projects/vikings/ragnarVideoDetail.png",
@@ -106,6 +143,10 @@
       "roles": "concept, development, animation",
       "client": "otis college of art and design, pprwrkstudio",
       "header_text": "Students share their college experiences on social media",
+      "header_text_width": "55%",
+      "header_image": "media/images/headers/header-otis.jpg",
+      "header_fill": "#ff0000",
+      "header_fill_opacity": "#ff0000",
       "live_link": "",
       "detail":
       [

@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var carousel;
-  var dataFile = "data/portfolio.json";
+  var dataFile = "media/data/portfolio.json";
   var jsonObj;
 
   $.getJSON(dataFile, function(data) {
@@ -129,30 +129,30 @@ $(document).ready(function() {
 
     console.log("populateDetails "+projectDetail)
 
-    hideHeaderText(project.header_text);
+    hideHeaderText(project);
 
     $("#full_title").text(projectDetail.title);
     $("#full_description").text(projectDetail.description);
 
-    $(".header-bg-image").attr('src', project.header_image);
+    $("role-list").text(projectDetail.roles);
+    $("tech-list").text(projectDetail.tech);
+
+    // $(".header-bg-image").attr('src', project.header_image);
 
     setupCarousel(projectDetail.images);
   }
 
   var hideTiles = function(projectid)
   {
-     $("#bg-image").removeClass('grayscale-filter');
     console.log('hideTiles');
     TweenMax.to($(".tiles"), .5, {css:{autoAlpha:0, display:'none'}, onComplete:showDetails, onCompleteParams:[projectid]});
-    TweenMax.to($(".fill-overlay"), .5, {css:{autoAlpha:0}, delay:.3});
-
   }
 
   var showTiles = function()
   {
     console.log('showTiles');
     TweenMax.to($(".tiles"), .5, {css:{autoAlpha:1, display:'block'}});
-    TweenMax.to($(".fill-overlay"), .5, {css:{autoAlpha:.8, onComplete:addGrayscaleFilter}});
+    //TweenMax.to($(".fill-overlay"), .5, {css:{autoAlpha:.8, onComplete:addGrayscaleFilter}});
   }
 
   var showDetails = function(projectid)
@@ -166,8 +166,8 @@ $(document).ready(function() {
 
   var hideDetails = function()
   {
-    $(".header-bg-image").attr('src', "img/ab3-header-bg.jpg");
     console.log('hideDetails');
+    hideHeaderText();
     TweenMax.to($(".project-detail"), .5, {css:{autoAlpha:0, display:'none'}, onComplete:showTiles});
   }
 
@@ -209,26 +209,57 @@ $(document).ready(function() {
     });
   }
 
-  var hideHeaderText = function(updatedText)
+  var hideHeaderText = function(updatedTextObj)
   {
-    var completeFunc;
-    var completeFuncParams;
-    if(updatedText !== 'undefined')
+    var obj = {};
+    var random = getRandomInt(0, jsonObj.header.sets.length - 1);
+    console.log(random);
+    if(updatedTextObj == undefined)
     {
-      completeFunc = showHeaderText;
-      completeFuncParams = [updatedText];  
+      obj.image = jsonObj.header.sets[random].image;
+      obj.bw_filter = jsonObj.header.sets[random].bw_filter;
+      obj.text = jsonObj.header.sets[random].text;
+      obj.color = jsonObj.header.sets[random].color;
+      obj.opacity = jsonObj.header.sets[random].opacity;
+      obj.text_width = jsonObj.header.sets[random].text_width;
+    }
+    else
+    {
+      obj.image = updatedTextObj.header_image;
+      obj.bw_filter = false;
+      obj.text = updatedTextObj.header_text;
+      obj.color = updatedTextObj.header_fill;
+      obj.opacity = updatedTextObj.header_fill_opacity;
+      obj.text_width = updatedTextObj.header_text_width;
     }
 
-    console.log(updatedText)
+    console.log(obj)
     
-    TweenMax.to($("#header-text"), .3, {css:{autoAlpha:0, display:'none'}, onComplete:showHeaderText, onCompleteParams:[updatedText]});
+    TweenMax.to($("#header-text"), .3, {css:{autoAlpha:0, display:'none'}, onComplete:showHeaderText, onCompleteParams:[obj]});
+    TweenMax.to($("#bg-image"), .3, {css:{autoAlpha:0}});
   }
 
-  var showHeaderText = function(updatedText)
+  var showHeaderText = function(updatedTextObj)
   {
-    console.log(updatedText)
-    $("#header-text").text(updatedText);
+    console.log(updatedTextObj)
+
+    $("#header-text").text(updatedTextObj.text);
+    $(".header-text-wrapper").css("width", updatedTextObj.text_width);
+    
+    if(updatedTextObj.bw_filter)
+    {
+      $("#bg-image").add('grayscale-filter');  
+    }
+    else
+    {
+      $("#bg-image").removeClass('grayscale-filter');
+    }
+    
+    $(".header-bg-image").attr('src', updatedTextObj.image);
+    
     TweenMax.to($("#header-text"), .3, {css:{autoAlpha:1, display:'block'}});
+    TweenMax.to($(".fill-overlay"), .5, {css:{autoAlpha:updatedTextObj.opacity}, delay:.3});
+    TweenMax.to($("#bg-image"), .5, {css:{autoAlpha:1}, delay:.3});
   }
 
   var addGrayscaleFilter = function()
@@ -240,6 +271,15 @@ $(document).ready(function() {
   {
     console.log('resizeCarousel');
     $('.owl-carousel').data().owlCarousel.e._onResize();
+  }
+
+
+  /**
+  * Returns a random integer between min (inclusive) and max (inclusive)
+  * Using Math.round() will give you a non-uniform distribution!
+  */
+  var getRandomInt = function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
 });

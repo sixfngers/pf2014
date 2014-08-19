@@ -192,7 +192,7 @@ header .fill-overlay
     z-index: 3;
     top:0;
     opacity: .8;
-    background-color: #ffffff;
+    background-color: #ff5f12;
 }
 
 header .fill
@@ -218,9 +218,9 @@ header .fill
     width:30%;
     max-width: 230px;
     text-align: left;
-    /*background-color: #FF5F12;*/
+    background-color: #FF5F12;
     /*background-color:#d12127;*/
-    background-color: #5dbc50;
+    /*background-color: #5dbc50;*/
     color:#fcf9f0;
     margin:8px 8px 8px 8px;
     display: inline-block;
@@ -291,7 +291,7 @@ header .fill
     right: 0;
     width:20px;
     height:20px;
-    background-image: url(../img/live_link.png);
+    background-image: url(../../media/images/live_link.png);
     background-size: 100%;
     opacity: .3;
     margin:8px;
@@ -426,9 +426,9 @@ h1
 
 .next .icon
 {
-    width:60px;
-    height:37px;
-    background: url(../img/back-button-sm.png);
+    width:40px;
+    height:25px;
+    background: url(../../media/images/back-button-ex-sm.png);
     display: inline-block;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -440,9 +440,9 @@ h1
 
 .back .icon
 {
-    width:60px;
-    height:20px;
-    background: url(../img/back-button-sm.png);
+    width:40px;
+    height:25px;
+    background: url(../../media/images/back-button-ex-sm.png);
     display: inline-block;
 }
 
@@ -452,7 +452,7 @@ h1
     text-align: left;
     font-size: 1em;
     vertical-align: top;
-    margin:3px 0 0 8px;
+    margin:1px 0 0 8px;
     display: inline-block;
 }
 

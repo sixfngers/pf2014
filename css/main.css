@@ -97,6 +97,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.alpha0
+{
+    opacity: 0;
+}
 
 .ital-sm
 {
@@ -179,6 +183,77 @@ header .fill
 }
 
 
+.flippedH
+{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.site-wrapper header
+{
+    position: relative;
+}
+
+
+.header-image-wrapper
+{
+    position: relative;
+    
+}
+
+
+
+.grayscale-filter
+{
+    -webkit-filter:grayscale(1);
+    filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+    filter:gray;
+}
+
+
+.header-text-wrapper
+{
+    position: absolute;
+    z-index: 5;
+    top:30%;
+    width: 80%;
+}
+
+header h2
+{
+
+    color:#fcf9f0;
+    /*opacity:0;*/
+    font-size:2.75em;
+    line-height:1.125em;
+    margin:0 auto;
+    text-shadow:0 1px 0 rgba(0,0,0,0.3);
+    
+    text-align:left;
+    margin-left: 10%;
+}
+
+header .fill-overlay
+{
+    position: absolute;
+    z-index: 3;
+    top:0;
+    opacity: .8;
+    background-color: #ffffff;
+}
+
+header .fill
+{
+    width:1600px;
+    height:400px;
+    opacity: .3;
+}
+
+
 .tile-wrapper
 {
     /*display:none;*/
@@ -202,16 +277,33 @@ header .fill
     display: inline-block;
     vertical-align:top;
     overflow: hidden;
-    cursor: pointer;
+    
+    position: relative;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b9515ce0ef7c08ccee8703ebd602c1f9a310f7a6
     -webkit-border-top-right-radius: 32px;
     -moz-border-radius-topright: 32px;
     border-top-right-radius: 32px;
 }
 
+<<<<<<< HEAD
+.clickable-tile
+{
+    cursor: pointer;
+}
+
+
+
 .shadowbox {    border: 2px solid #ffffff;    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);}
 
+=======
+.shadowbox {    border: 2px solid #ffffff;    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);}
+
+>>>>>>> b9515ce0ef7c08ccee8703ebd602c1f9a310f7a6
 .project-tile .upper
 {
     position: relative;
@@ -262,6 +354,10 @@ header .fill
     background-image: url(../img/live_link.png);
     background-size: 100%;
     opacity: .3;
+<<<<<<< HEAD
+    margin:8px;
+=======
+>>>>>>> b9515ce0ef7c08ccee8703ebd602c1f9a310f7a6
 }
 
 .project-link:hover
@@ -271,6 +367,7 @@ header .fill
 
 .project-roles
 {
+    visibility: hidden;
     margin-bottom:8px;
 }
 
@@ -300,9 +397,20 @@ header .fill
     margin-bottom: 60px;
 }
 
+<<<<<<< HEAD
+h1
+{
+    color:#a1a194;
+}
+
+.project-description
+{
+    /*font-size: .75em;*/
+=======
 .project-description .lower
 {
     font-size: .75em;
+>>>>>>> b9515ce0ef7c08ccee8703ebd602c1f9a310f7a6
 }
 
 .project-description .project-roles div,
@@ -369,6 +477,56 @@ header .fill
 }
 
 
+<<<<<<< HEAD
+.back
+{
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.next
+{
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.next .icon
+{
+    width:60px;
+    height:37px;
+    background: url(../img/back-button-sm.png);
+    display: inline-block;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.back .icon
+{
+    width:60px;
+    height:20px;
+    background: url(../img/back-button-sm.png);
+    display: inline-block;
+}
+
+.back .text,
+.next .text
+{
+    text-align: left;
+    font-size: 1em;
+    vertical-align: top;
+    margin:3px 0 0 8px;
+    display: inline-block;
+}
+=======
+>>>>>>> b9515ce0ef7c08ccee8703ebd602c1f9a310f7a6
 
 
 footer
@@ -485,6 +643,11 @@ footer .content-wrapper
         width:40%;
         margin:8px;
     }
+
+    header h2
+    {
+        font-size: 30px;
+    }
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1359px) {
@@ -495,6 +658,11 @@ footer .content-wrapper
         margin:16px;
 
     }
+/*
+    header h2
+    {
+        font-size: 60px;
+    }*/
 }
 
 @media only screen and (min-width: 1360px) and (max-width: 4000px) {

@@ -1,15 +1,39 @@
 $(document).ready(function() {
 
+  window.log = function(){} ;
+  var href = window.location.href;
+
+  if( href.indexOf('localhost') > -1 || href.indexOf('davidcaneso') > -1)
+  {
+    window.log = function( msg, obj, _stack ){
+        var stack = _stack || false;
+        if(typeof window.console != 'undefined' && typeof window.console.log != 'undefined') {
+            if (typeof obj !== 'undefined'){
+                console.log("LOG :: "+msg, obj, stack);
+            } else {
+                console.log("LOG :: ", msg);            
+            }
+        }
+    };
+  }
+
+  var baseTitle = "David Caneso | "
   var carousel;
   var dataFile = "media/data/portfolio.json";
   var jsonObj;
+  var projectsHistoryIds = [];
 
   $.getJSON(dataFile, function(data) {
     // data is a JavaScript object now. Handle it as such
 
     jsonObj = data;
 
-    _buildTiles(); 
+    
+    _buildTiles();
+
+    window.log("hash "+History.getHash());
+
+    _prepHistory() 
 
     $(".no-touch .contact-wrapper .icon").hover(
       function(){
@@ -26,6 +50,71 @@ $(document).ready(function() {
   });
 
 
+  var _prepHistory = function()
+  {  
+    var State = History.getState();
+    History.log('initial:', State.data, State.title, State.url);
+    window.log('initial:', State.data, State.title, State.url);
+
+    History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+      // Log the State
+      var State = History.getState(); // Note: We are using History.getState() instead of event.state
+      History.log('statechange:', State.data, State.title, State.url);
+      _checkAllHistoryStates(State);
+    });
+
+    window.log("all history states "+projectsHistoryIds);
+
+    var iLimit = projectsHistoryIds.length;
+    for(i = 0; i<iLimit; i++)
+    {
+      if(State.url.indexOf(projectsHistoryIds[i]) > 0)
+      {
+        window.log("record state for " + projectsHistoryIds[i] + ' = ' + State.url.indexOf(projectsHistoryIds[i]));
+        navigateHistory(projectsHistoryIds[i])
+        break;
+      }
+    }
+  }
+
+  var _checkAllHistoryStates = function(state)
+  {
+    var iLimit = projectsHistoryIds.length;
+    var nextStateId = "home";
+
+    for(i = 0; i<iLimit; i++)
+    {
+      if(state.url.indexOf(projectsHistoryIds[i]) > 0)
+      {
+        window.log("record state for " + projectsHistoryIds[i] + ' = ' + state.url.indexOf(projectsHistoryIds[i]));
+        nextStateId = projectsHistoryIds[i];
+        break;
+      }
+    }
+
+    navigateHistory(nextStateId);
+  }
+
+  var navigateHistory = function(projectId)
+  {
+    if(projectId == projectsHistoryIds[0])
+    {
+      hideDetails();
+    }
+    else
+    {
+      var iLimit = projectsHistoryIds.length;
+      for(i = 0; i<iLimit; i++)
+      {
+        window.log('go to projectId '+ projectId)
+        if(projectId == projectsHistoryIds[i])
+        {
+          hideTiles(projectId);
+          break;
+        }
+      }  
+    }
+  }
   
 
   var _buildTiles = function()
@@ -53,15 +142,15 @@ $(document).ready(function() {
  
 
  
-
+    projectsHistoryIds.push('home');
 
     var projectListObj = jsonObj.projectlist;
-    
 
     for (var projectObj in projectListObj)
     {
       if (projectListObj.hasOwnProperty(projectObj)) 
       {
+          
           projectTemplate = {
             pid : projectListObj[projectObj].project_id,
             title : projectListObj[projectObj].title,
@@ -71,14 +160,17 @@ $(document).ready(function() {
             link : projectListObj[projectObj].live_link
           };
 
+          projectsHistoryIds.push(projectTemplate.pid);
+
           parsedTemplate = _.template(template,  projectTemplate );
-          console.log(projectObj);
+          //console.log(projectObj);
+
           var tile = $('.tile-wrapper');
           
           tile.append(parsedTemplate);
           tile.id = projectListObj[projectObj].project_id;
           
-          console.log('link', projectTemplate.link);
+          //console.log('link', projectTemplate.link);
 
 
           if(projectTemplate.link.length == 0)
@@ -93,7 +185,9 @@ $(document).ready(function() {
     }
 
     $('.clickable-tile').click(function() {
-      hideTiles($(this).parent()[0].id);
+      var projectId = $(this).parent()[0].id;
+      History.pushState({state:1,rand:Math.random()}, baseTitle + projectId, "?state="+projectId);
+      hideTiles(projectId);
     });
 
     $('.project-link').click(function(e) {
@@ -116,6 +210,7 @@ $(document).ready(function() {
     });
 
     $('.back').click(function(){
+      History.pushState({state:0,rand:Math.random()}, baseTitle +'Portfolio', "?state=home");
       hideDetails();
     });
   }
@@ -151,7 +246,7 @@ $(document).ready(function() {
 
     // $(".header-bg-image").attr('src', project.header_image);
 
-    if(projectid == 'david')
+    if(projectid == 'about')
     {
       //todo include contact template
     }

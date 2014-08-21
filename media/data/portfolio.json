@@ -24,7 +24,8 @@
         "image" : "media/images/headers/ab1-header-bg.jpg",
         "bw_filter":"true",
         "text" : "Nice to see you here.",
-        "color" : "#ff5f12",
+        "text_color" : "#fcf9f0",
+        "color" : "#5dbc50",
         "opacity" : "0.8",
         "text_width" : "80%"
       },
@@ -32,7 +33,8 @@
         "image" : "media/images/headers/ab1-header-bg.jpg",
         "bw_filter":"true",
         "text" : "drink tea instead of coffee.",
-        "color" : "#ff5f12",
+        "text_color" : "#fcf9f0",
+        "color" : "#5dbc50",
         "opacity" : "0.8",
         "text_width" : "80%"
       },
@@ -40,7 +42,8 @@
         "image" : "media/images/headers/ab1-header-bg.jpg",
         "bw_filter":"true",
         "text" : "follow weird al on twitter. @alyankovic",
-        "color" : "#ff5f12",
+        "text_color" : "#fcf9f0",
+        "color" : "#5dbc50",
         "opacity" : "0.8",
         "text_width" : "80%"
       },
@@ -48,7 +51,8 @@
         "image" : "media/images/headers/ab1-header-bg.jpg",
         "bw_filter":"true",
         "text" : "watch more animated tv shows.",
-        "color" : "#ff5f12",
+        "text_color" : "#fcf9f0",
+        "color" : "#5dbc50",
         "opacity" : "0.8",
         "text_width" : "80%"
       }
@@ -62,16 +66,18 @@
   [
     {
       "project_id":"vikings",
-      "title": "VIKINGS ULTIMATE REALITY EXPERIENCE",
+      "title": "Vikings",
       "thumb": "media/images/projects/vikings/ragnarVideoDetail.png",
       "type": "flash",
       "roles": "animation, development",
+      "tech": "",
       "client": "bpg, A&E",
       "header_text": "A 3D experience brings the Vikings cast to life.",
+      "header_text_color" : "#fcf9f0",
       "header_text_width": "55%",
       "header_image": "media/images/headers/header-vikings.jpg",
-      "header_fill": "#ff0000",
-      "header_fill_opacity": "#ff0000",
+      "header_fill": "#000000",
+      "header_fill_opacity": "0",
       "live_link": "http://www.history.com/shows/vikings/interactives/vikings-ultimate-reality-experience",
       "detail":
       [
@@ -92,7 +98,6 @@
               "asset": "media/images/projects/vikings/ragnar_rotation.png"
             },
             {
-              "main":"true",
               "asset": "media/images/projects/vikings/ragnarVideoDetail.png"
             }
           ]
@@ -102,17 +107,92 @@
 
     {
       "project_id":"getonup",
-      "title": "Can't Stop The Funk",
-      "thumb": "media/images/projects/vikings/ragnarVideoDetail.png",
+      "title": "Get On Up",
+      "thumb": "media/images/projects/getonup/thumb.jpg",
+      "type": "html and flash",
+      "roles": "Roles: front end and back end development",
+      "tech": "Tech: flash media server, ffmpeg, CodeIgniter, content admin",
+      "client": "universal entertainment, bpg",
+      "header_text": "A User Generated Dance Marathon",
+      "header_text_width": "70%",
+      "header_text_color": "#fcf9f0",
+      "header_image": "media/images/headers/header-getonup.jpg",
+      "header_fill": "#e3b000",
+      "header_fill_opacity": "0",
+      "live_link": "https://www.cantstopthefunk.com",
+      "detail":
+      [
+        {
+          "title": "Can't Stop The Funk",
+          "description":"Users recorded their dance moves with thier webcam, or mobile device and uploaded. Videos were then stored, and gifs were created at runtime using ffmpeg. The entire experience was mobile friendly and easily sharable. The results were an endless funk-a-thon of users dancing to James Brown.",
+          "images": 
+          [
+            {
+              "asset": "media/images/projects/getonup/dancer.jpg"
+            },
+            {
+              "asset": "media/images/projects/getonup/dance-motion.gif"
+            },
+            {
+              "asset": "media/images/projects/getonup/how-to.jpg"
+            }
+          ]
+        }
+      ]   
+    },
+
+    {
+      "project_id":"perfect",
+      "title": "Black Swan",
+      "thumb": "media/images/projects/perfect/entry.png",
       "type": "flash",
-      "roles": "concept, development, animation",
+      "roles": "Roles: Concepting, Video Editing, Development",
+      "tech": "Tech: Facebook Sharing Integration",
+      "client": "Fox Searchlight, Watson DG",
+      "header_text": "Fractured, Haunting, Perfect.",
+      "header_text_color" : "#fcf9f0",
+      "header_text_width": "80%",
+      "header_image": "media/images/headers/blackswan-bg.jpg",
+      "header_fill": "#000000",
+      "header_fill_opacity": ".2",
+      "live_link": "http://ijustwanttobeperfect.com",
+      "detail":
+      [
+        {
+          "title": "I Just Want To Be Perfect",
+          "description":"A fractured video grid that was set to release clips as the release date came closer. Users could share each video on facebook and twitter. Type ROTHBART while viewing the site and get an easter egg video.</br>Keyart Award Winner 2012",
+          "images": 
+          [
+            {
+              "asset": "media/images/projects/perfect/entry.png"
+            },
+            {
+              "asset": "media/images/projects/perfect/grid-prop.jpg"
+            },
+            {
+              "asset": "media/images/projects/perfect/releasedates.png"
+            }
+          ]
+        }
+      ]   
+    },
+
+
+    {
+      "project_id":"otis",
+      "title": "At The Heart of Otis",
+      "thumb": "media/images/projects/otisheart/thumb.jpg",
+      "type": "flash",
+      "roles": "Roles: concepting, development, animation",
+      "tech": "Tech: front end and backend development, social integration",
       "client": "otis college of art and design, pprwrkstudio",
-      "header_text": "Students share their college experiences on social media",
-      "header_text_width": "55%",
+      "header_text": "Students sharing their college experiences",
+      "header_text_color" : "#fcf9f0",
+      "header_text_width": "50%",
       "header_image": "media/images/headers/header-otis.jpg",
-      "header_fill": "#ff0000",
-      "header_fill_opacity": "#ff0000",
-      "live_link": "",
+      "header_fill": "#ea4738",
+      "header_fill_opacity": "0",
+      "live_link": "http://davidcaneso.com/otisattheheart/build/",
       "detail":
       [
         {
@@ -121,7 +201,6 @@
           "images": 
           [
             {
-              "main":"true",
               "asset": "media/images/projects/otisheart/entry.png"
             },
             {
@@ -136,34 +215,297 @@
     },
 
     {
-      "project_id":"otis",
-      "title": "At The Heart of Otis",
-      "thumb": "media/images/projects/vikings/ragnarVideoDetail.png",
+      "project_id":"pbskids",
+      "title": "Cat in the Hat",
+      "thumb": "media/images/projects/pbskids/balloons.jpg",
+      "type": "html5, javascript, svg",
+      "roles": "Roles: developer",
+      "tech": "Tech: html5 video, canvas, svg, javascript",
+      "client": "PBS Kids, bpg",
+      "header_text": "Dr. Suess birthday celebration",
+      "header_text_width": "70%",
+      "header_text_color": "#fcf9f0",
+      "header_image": "media/images/headers/header-pbskids.jpg",
+      "header_fill": "#e3b000",
+      "header_fill_opacity": "0",
+      "live_link": "./media/sites/pbskids/",
+      "detail":
+      [
+        {
+          "title": "Cat In The Hat Cat-e-bration",
+          "description":"Gated by a group of balloons that need to be popped, once inside the viewer could watch a video snip of the special episode airing on Dr. Seuss birthday. Balloons were dynamically drawn using html5 canvas element.",
+          "images": 
+          [
+            {
+              "asset": "media/images/projects/pbskids/entry.jpg"
+            },
+            {
+              "asset": "media/images/projects/pbskids/video.jpg"
+            },
+            {
+              "asset": "media/images/projects/pbskids/balloons-prop.jpg"
+            }
+          ]
+        }
+      ]   
+    },
+
+    {
+      "project_id":"bathtub",
+      "title": "Welcome To The Bathtub",
+      "thumb": "media/images/projects/bathtub/entry-sm.jpg",
       "type": "flash",
-      "roles": "concept, development, animation",
-      "client": "otis college of art and design, pprwrkstudio",
-      "header_text": "Students share their college experiences on social media",
-      "header_text_width": "55%",
-      "header_image": "media/images/headers/header-otis.jpg",
-      "header_fill": "#ff0000",
-      "header_fill_opacity": "#ff0000",
+      "roles": "Roles: Development, Animation,",
+      "tech": "Tech: Twitter Integration, user commenting",
+      "client": "Fox Searchlight, Watson DG",
+      "header_text": " ",
+      "header_text_color" : "#fcf9f0",
+      "header_text_width": "80%",
+      "header_image": "media/images/headers/beasts-bg.jpg",
+      "header_fill": "#000000",
+      "header_fill_opacity": "0",
+      "live_link": "http://www.welcometothebathtub.com",
+      "detail":
+      [
+        {
+          "title": "Beasts of the Southern Wild",
+          "description":"Through a visually-dynamic web experience, visitors are invited to the Bathtub to join Hushpuppy in a celebration of life and childhood imagination. Includes live user comment submission.",
+          "images": 
+          [
+            {
+              "asset": "media/images/projects/bathtub/detail-2.jpg"
+            },
+            {
+              "asset": "media/images/projects/bathtub/detail.jpg"
+            },
+            {
+              "asset": "media/images/projects/bathtub/tweet-detail.jpg"
+            },
+            {
+              "asset": "media/images/projects/bathtub/entry.jpg"
+            }
+            
+          ]
+        }
+      ]   
+    },
+    {
+      "project_id":"brother",
+      "title": "Brother Vs Brother",
+      "thumb": "media/images/projects/brother/thumb.jpg",
+      "type": "html",
+      "roles": "Roles: Development",
+      "tech": "Tech: Skrollr.js for parallax, Sass",
+      "client": "BPG",
+      "header_text": "Parallaxy goodness.",
+      "header_text_color" : "#fcf9f0",
+      "header_text_width": "80%",
+      "header_image": "media/images/headers/brother-bg.jpg",
+      "header_fill": "#000000",
+      "header_fill_opacity": "0",
+      "live_link": "./media/sites/brother-vs-brother/",
+      "detail":
+      [
+        {
+          "title": "Brother vs Brother Case Study",
+          "description":"When presented with the idea of how to showcase the thinking and capabilites behind the BPG Brother vs Brother banner campaign, we devised a template to use on this and future case studies to simplify the production timeline. Simple parallax was utilized and gives the pages a bit of flair without oversadowing the content.",
+          "images": 
+          [
+            {
+              "asset": "media/images/projects/brother/entry.jpg"
+            },
+            {
+              "asset": "media/images/projects/brother/parallax.jpg"
+            }
+          ]
+        }
+      ]   
+    },
+
+    {
+      "project_id":"twoways",
+      "title": "Two Ways Through Life",
+      "thumb": "media/images/projects/twoways/entry.png",
+      "type": "flash",
+      "roles": "Roles: Development, Animation",
+      "tech": "Tech: Backend Integration, Social Media Integration",
+      "client": "Fox Searchlight, Watson DG",
+      "header_text": "Nature or Nurture?",
+      "header_text_color" : "#fcf9f0",
+      "header_text_width": "80%",
+      "header_image": "media/images/headers/tree-bg.jpg",
+      "header_fill": "#fec11b",
+      "header_fill_opacity": "0",
+      "live_link": "http://www.twowaysthroughlife.com",
+      "detail":
+      [
+        {
+          "title": "Two Ways Through Life",
+          "description":"Explore the amazing cinematography of “The Tree of Life”. Users could comment on each of the clips as well as share on their social media accounts.<br />2011 Keyart award winner<br />2011 Webby award nominee",
+          "images": 
+          [
+            {
+              "asset": "media/images/projects/twoways/entry.png"
+            },
+            {
+              "asset": "media/images/projects/twoways/uiOverview.png"
+            },
+            {
+              "asset": "media/images/projects/twoways/videoshare.png"
+            },
+            {
+              "asset": "media/images/projects/twoways/comments.png"
+            }
+          ]
+        }
+      ]   
+    },
+
+    {
+      "project_id":"kumar",
+      "title": "Harold and Kumar",
+      "thumb": "media/images/projects/hk/hkentry-sm.jpg",
+      "type": "flash",
+      "roles": "Roles: Development, Animation",
+      "tech": "Tech: Dynamic 3D Text Generation, Facebook Integration, user uploads",
+      "client": "Warner Bros., Watson DG",
+      "header_text": "Wafflebot guided poster creator",
+      "header_text_color" : "#fcf9f0",
+      "header_text_width": "80%",
+      "header_image": "media/images/headers/header-kumar-bg-450.jpg",
+      "header_fill": "#000000",
+      "header_fill_opacity": "0",
+      "live_link": "http://www.watsondg.com/dev/haroldandkumar/build104/",
+      "detail":
+      [
+        {
+          "title": "Harold and Kumar’s sh*tty upload feature",
+          "description":"Complete with talking Wafflebot users upload an image into a poster and add their name in 3d text. Save the image by downloading, printing or posting to facebook.",
+          "images": 
+          [
+            {
+              "asset": "media/images/projects/hk/hkentry.png"
+            },
+            {
+              "asset": "media/images/projects/hk/hk1.png"
+            },
+            {
+              "asset": "media/images/projects/hk/hk2.png"
+            },
+            {
+              "asset": "media/images/projects/hk/hk3.png"
+            }
+          ]
+        }
+      ]   
+    },
+
+    {
+      "project_id":"likecrazy",
+      "title": "Like Crazy",
+      "thumb": "media/images/projects/likecrazy/entry-sm.png",
+      "type": "flash",
+      "roles": "Roles: Development, Animation",
+      "tech": "Tech: Twitter OAUTH login, twitter feed aggregation, and caching",
+      "client": "Paramount Studios, Watson DG",
+      "header_text": "I ___ you, #LikeCrazy",
+      "header_text_color" : "#ffffff",
+      "header_text_width": "80%",
+      "header_image": "media/images/headers/ab1-header-bg.jpg",
+      "header_fill": "#fec11b",
+      "header_fill_opacity": ".8",
       "live_link": "",
       "detail":
       [
         {
-          "title": "At The Heart of Otis",
-          "description":"An interactive call to raise funds for the school. Users could share their stories about the faculty and their school experience. Concepted and executed in collaboaration with pprwrk studio",
+          "title": "Like Crazy Twitter Feature",
+          "description":"Users completed the phrase I ___ you, #LikeCrazy. Submissions were then sized and displayed based on popularity. Twitter feeds of the director and the public feed of the hash tag were also pulled into the site.",
           "images": 
           [
             {
-              "main":"true",
-              "asset": "media/images/projects/otisheart/entry.png"
+              "asset": "media/images/projects/likecrazy/entry.png"
             },
             {
-              "asset": "media/images/projects/otisheart/uiDetail.png"
+              "asset": "media/images/projects/likecrazy/feeds.png"
             },
             {
-              "asset": "media/images/projects/otisheart/quote.png"
+              "asset": "media/images/projects/likecrazy/submit.png"
+            }
+          ]
+        }
+      ]   
+    },
+
+    
+    {
+      "project_id":"next",
+      "title": "ESP Game",
+      "thumb": "media/images/projects/next/entry.png",
+      "type": "flash",
+      "roles": "Roles: concepting, development, animation",
+      "tech": "Tech: Dynamic random game data",
+      "client": "Paramount Pictures, Watson DG",
+      "header_text": "Can you predict the future?",
+      "header_text_color" : "#fcf9f0",
+      "header_text_width": "80%",
+      "header_image": "media/images/headers/next-bg.jpg",
+      "header_fill": "#fec11b",
+      "header_fill_opacity": "0",
+      "live_link": "./media/sites/espTest/",
+      "detail":
+      [
+        {
+          "title": "Next Movie Esp Test",
+          "description":"The game generates random game data at runtime and users are challenged to guess the correct symbols on the cards. The games result was a score and a sharable ineractive badge they could post on their social media wall.",
+          "images": 
+          [
+            {
+              "asset": "media/images/projects/next/entry.png"
+            },
+            {
+              "asset": "media/images/projects/next/uiDetail.png"
+            },
+            {
+              "asset": "media/images/projects/next/result.png"
+            }
+          ]
+        }
+      ]   
+    },
+
+    {
+      "project_id":"david",
+      "title": "More About Me",
+      "thumb": "media/images/projects/david/birth.png",
+      "type": "",
+      "roles": "<a href='./media/resume.pdf'  target='_blank'><span class='contactlink'>Resume PDF</span></a><br /><a href='mailTo:dmc@davidcaneso.com'><span class='contactlink'>Email</span></a><br /><a href='http://www.linkedin.com/pub/david-caneso/4/227/146' target='_blank'><span class='contactlink'>LinkedIn</span></a>",
+      "tech": "",
+      "client": "",
+      "header_text": "Passionate About What I Do.",
+      "header_text_color" : "#fcf9f0",
+      "header_text_width": "80%",
+      "header_image": "media/images/headers/ab1-header-bg.jpg",
+      "header_fill": "#5dbc50",
+      "header_fill_opacity": ".8",
+      "live_link": "http://www.linkedin.com/pub/david-caneso/4/227/146",
+      "detail":
+      [
+        {
+          "title": "",
+          "description":"Currently freelancing at BPG Advertising, and has developed many award winning interactive apps, campaigns and games for the entertainment industry.<p>More work available on request.</p>",
+          "images": 
+          [
+            {
+              "asset": "media/images/projects/david/fan.png"
+            },
+            {
+              "asset": "media/images/projects/david/birth.png"
+            },
+            {
+              "asset": "media/images/projects/david/sequoias.png"
+            },
+            {
+              "asset": "media/images/projects/david/hiker.png"
             }
           ]
         }

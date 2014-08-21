@@ -170,12 +170,11 @@ textarea {
     z-index: 5;
     top:30%;
     width: 80%;
+    color:#fcf9f0;
 }
 
 header h2
 {
-
-    color:#fcf9f0;
     /*opacity:0;*/
     font-size:2.75em;
     line-height:1.125em;
@@ -192,7 +191,7 @@ header .fill-overlay
     z-index: 3;
     top:0;
     opacity: .8;
-    background-color: #ff5f12;
+    background-color: #5dbc50;
 }
 
 header .fill
@@ -218,9 +217,9 @@ header .fill
     width:30%;
     max-width: 230px;
     text-align: left;
-    background-color: #FF5F12;
+    /*background-color: #FF5F12;*/
     /*background-color:#d12127;*/
-    /*background-color: #5dbc50;*/
+    background-color: #5dbc50;
     color:#fcf9f0;
     margin:8px 8px 8px 8px;
     display: inline-block;
@@ -233,6 +232,8 @@ header .fill
     -webkit-border-top-right-radius: 32px;
     -moz-border-radius-topright: 32px;
     border-top-right-radius: 32px;
+
+    border: 2px solid #ffffff;
 }
 
 .clickable-tile
@@ -240,9 +241,8 @@ header .fill
     cursor: pointer;
 }
 
-
-
-.shadowbox {    border: 2px solid #ffffff;    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);}
+.owl-stage-outer {-moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);    box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);}
+.shadowbox {-moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);}
 
 .project-tile .upper
 {
@@ -275,7 +275,7 @@ header .fill
 
 .project-title
 {
-
+    line-height: 30px;
 }
 
 .project-media
@@ -286,6 +286,7 @@ header .fill
 
 .project-link
 {
+    cursor: pointer;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -308,6 +309,20 @@ header .fill
     margin-bottom:8px;
 }
 
+.lower a:link,
+.lower a:visited
+{
+    color:inherit;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+
+.lower a:hover,
+.lower a:active
+{
+    color:#5dbc50;
+}
 
 .project-detail
 {
@@ -334,10 +349,19 @@ header .fill
     margin-bottom: 60px;
 }
 
+.carousel-hint
+{
+    color:#a1a194;
+    font-size: .75em;
+    margin-bottom: 16px;
+}
+
 h1
 {
     color:#a1a194;
 }
+
+
 
 .project-description
 {
@@ -370,6 +394,13 @@ h1
 {
     width:960px;
 }
+
+
+.owl-stage-outer
+{
+   /*border:1px solid #a1a194; */
+}
+
 
 #owl-demo .item{
   margin: 3px;
@@ -454,6 +485,36 @@ h1
     vertical-align: top;
     margin:1px 0 0 8px;
     display: inline-block;
+}
+
+.contact-wrapper
+{
+    text-align: right;
+    margin:8px 12px 0 0;
+}
+
+.contact-wrapper .icon
+{
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.over
+{
+    opacity: 1;
+}
+
+.out
+{
+    opacity: .6;
+}
+
+.contact-wrapper a
+{
+    text-decoration: none;
+    color:inherit;
+    font-weight: bold;
+    font-family: "PT Serif", sans;
 }
 
 

@@ -1,0 +1,532 @@
+@font-face {
+  font-family: 'pbs_kids_subheadbold';
+  src: url("fonts/pbskidssubhead-bold-webfont.eot");
+  src: url("fonts/pbskidssubhead-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pbskidssubhead-bold-webfont.woff") format("woff"), url("fonts/pbskidssubhead-bold-webfont.ttf") format("truetype"), url("fonts/pbskidssubhead-bold-webfont.svg#pbs_kids_subheadbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'pbs_kids_subheadregular';
+  src: url("fonts/pbskidssubhead-regular-webfont.eot");
+  src: url("fonts/pbskidssubhead-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pbskidssubhead-regular-webfont.woff") format("woff"), url("fonts/pbskidssubhead-regular-webfont.ttf") format("truetype"), url("fonts/pbskidssubhead-regular-webfont.svg#pbs_kids_subheadregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'pbs_kids_headline_condensedRg';
+  src: url("fonts/pbskids_headlinecondensed-reg-webfont.eot");
+  src: url("fonts/pbskids_headlinecondensed-reg-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pbskids_headlinecondensed-reg-webfont.woff") format("woff"), url("fonts/pbskids_headlinecondensed-reg-webfont.ttf") format("truetype"), url("fonts/pbskids_headlinecondensed-reg-webfont.svg#pbs_kids_headline_condensedRg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+  
+  
+
+@font-face {
+    font-family: 'pbs_kids_headlineregular';
+    src: url('fonts/pbskidsheadline-regular-webfont.eot');
+    src: url('fonts/pbskidsheadline-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pbskidsheadline-regular-webfont.woff') format('woff'),
+         url('fonts/pbskidsheadline-regular-webfont.ttf') format('truetype'),
+         url('fonts/pbskidsheadline-regular-webfont.svg#pbs_kids_headlineregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+  
+  
+body
+{
+	margin:0;
+	padding:0;
+	font-family:Arial,Helvetica,sans-serif;
+	background-color: #ec037b;
+	background-image: url("../../assets/images/bg_tile.png");
+  	background-repeat: repeat-x;
+}
+
+header, section, footer
+{
+	margin:0;
+	padding:0;
+	display:block;
+}
+
+
+#site-wrapper
+{
+  margin:0 auto;
+  min-width:1200px;
+  min-height:768px;
+  width:100%;
+  position:relative;
+}
+
+
+#footer-container
+ {
+  	font-family: "pbs_kids_subheadregular", Arial, sans-serif;
+  	font-size: .6em;
+	color: #ffffff;
+  	
+  	position:absolute;
+	top:670px;
+	width: 100%;
+	min-width: 1024px;
+	margin:0 auto;
+	text-align: center;
+	z-index:3;
+}
+
+#copyright
+{
+	margin-top:70px;
+}
+
+
+#cat-container
+{
+	position:absolute;
+	top:214px;
+	width:100%;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	min-width:1200px;
+	z-index:4;
+}
+
+
+#cat-balloons
+{
+	position:absolute;
+	left:50%;
+	z-index:2;
+}
+
+#main-content
+{
+	position:absolute;
+	top:0px;
+	width:100%;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	min-width:1200px;
+	z-index:6;
+}
+
+#bg-container
+{
+	position:absolute;
+	top:0px;
+	width:100%;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	min-width:1200px;
+	min-height:670px;
+	z-index:1;
+	background-image: url('../../assets/images/bg.png');
+	background-position: top;
+    background-repeat: no-repeat;
+}
+
+#cat-character
+{
+	position:relative;
+	left:-520px;
+}
+
+#cat-hover-balloons
+{
+	position:relative;
+	left:-730px;
+}
+
+#cat-balloons-svg
+{
+	width:418px;
+	height:670px;
+}
+
+#cat-balloons-svg svg
+{
+	position:absolute !important;
+	top:0;
+	left:0;
+}
+
+
+#social-link-container
+{
+	position:absolute;
+	top:8px;
+	left:50%;
+	width:575px;
+	text-align:right;
+	z-index:7;
+}
+
+
+#hover-balloon-container
+{
+	position:absolute;
+	width:228px;
+	height:320px;
+	display:inline;
+}
+
+#hover-balloon-container svg
+{
+	position:absolute !important;
+	top:0;
+	left:0;
+}
+
+#social-links
+{
+	float:right;
+	margin-right:60px;
+}
+
+.social_icon
+{
+	position:relative;
+	display:inline;
+	width:24px;
+	margin-right: 10px;
+	float:right;
+}
+
+.social_icon_link
+{
+	position:relative;
+	top:0px;
+	z-index: 1;
+}
+
+.social_hover
+{
+	position:absolute;
+	top:0px;
+	opacity: 0;
+	z-index: 0;
+}
+
+
+#upper-links
+{
+	position:relative;
+	top:0;
+	width:1024px;
+	margin: 0 auto;
+}
+
+
+#banner
+{
+	position:absolute;
+	top:14px;
+	left:0px;
+}
+
+#kids-logo
+{
+	position:absolute;
+	top:82px;
+	left:335px;
+}
+
+
+#tune-in
+{
+	position:absolute;
+	top:63px;
+	left:535px;
+}
+
+#cta
+{
+	position:absolute;
+	top:102px;
+	left:600px;
+	width:181px;
+	height:26px;
+	overflow: hidden;
+}
+
+#knows-logo-container
+{
+	position:absolute;
+	top:0px;
+	left:880px;
+}
+
+#knows-logo
+{
+	position:absolute;
+	top:192px;
+}
+
+#video-container
+{
+	position:relative;
+	margin: 0 auto;
+	top:182px;
+	left:20px;
+	width:661px;
+	height:374px;
+	overflow:hidden;
+}
+
+#playerframe
+{
+	position: absolute;
+	top:0px;
+	left:0px;
+}
+
+
+#videoelement
+{
+	position: absolute;
+	top:0px;
+	left:-50px;
+	visibility:hidden;
+}
+
+.no-touch #videoelement
+{
+	visibility:visible !important;
+}
+
+
+#lower-link-row
+{
+	position:relative;
+	margin: 0 auto;
+	top:190px;
+	left:8px;
+	width:661px;
+}
+
+.link-container
+{
+	position:relative;
+	float:left;
+	width:220px;
+}
+
+#lower-links
+{
+	display:inline;
+	margin-left:20px;
+}
+
+.lower-link-text
+{
+	display:inline;
+	margin-right: 3px;
+}
+
+.left-link-arrow
+{
+	display:inline;	
+	opacity: 0;
+	margin-right: 8px;
+}
+
+
+.right-link-arrow
+{
+	display:inline;
+}
+
+#links
+{
+	margin-top:5px;
+	margin-left:100px;
+}
+
+
+.pbslink
+{	
+  font-family: "pbs_kids_headlineregular", Arial, sans-serif;
+  font-size: 1.2em;;
+  color:#ffffff;
+  text-decoration:none;
+}
+
+.link-subtext
+{	
+  font-family: "pbs_kids_headlineregular", Arial, sans-serif;
+  font-size: 1em;;
+  color:#ffffff;
+  text-decoration:none;
+  margin-top:0;
+}
+
+
+#initial-play-button
+{
+	position:absolute;
+	width:661px;
+	height:374px;
+	z-index: 10;
+}
+
+#video-controls
+{
+	position:absolute;
+	z-index: 1;
+	top:310px;
+	left:40px;
+	width:34px;
+	height:39px;
+	background-image:url('../../assets/images/play-pause-sprite.png');
+	background-repeat:no-repeat;
+	visibility:hidden;
+}
+
+.play-pause-play
+{
+	background-position: 0 0;
+}
+
+.play-pause-pause
+{
+	background-position: 0 -39px;
+}
+
+
+.pinkcolor
+{
+	color:#ec037b;
+}
+
+#balloon-wrapper
+{
+	position:relative;
+	left:-600px;
+	margin-left:50%;
+	width:1200px;
+}
+
+#balloon-container div
+{
+	position:absolute;
+	top:0;
+	z-index: 30;
+}
+
+
+.balloon-drawing
+{
+	position:absolute;
+	top:0;
+	z-index:0;
+}
+
+#intro-button
+{
+	position:absolute;
+	width:1200px;
+	height:900px;
+	background-image:url('../../assets/images/blank.png');
+	background-repeat: no-repeat;
+}
+
+
+
+#intro-text
+{
+	position:absolute;
+	margin-top:300px;
+	margin-left:300px;
+	visibility: hidden;
+}
+
+#initially-hidden-content
+{
+	display:none;
+}
+
+
+
+.rotation-loop
+{
+	-webkit-animation:link-rotation .45s ease-in-out infinite alternate;
+	-moz-animation:link-rotation .45s ease-in-out infinite alternate;
+	-o-animation:link-rotation .45s ease-in-out infinite alternate;
+	animation:link-rotation .45s ease-in-out infinite alternate;
+}
+
+
+@-webkit-keyframes link-rotation
+{
+	20% { -webkit-transform: rotate(4deg); }
+	45% { -webkit-transform: rotate(-4deg); }
+	0%,100% { -webkit-transform: rotate(0deg); }
+}
+
+@-moz-keyframes link-rotation
+{
+	20% { -moz-transform: rotate(4deg); }
+	45% { -moz-transform: rotate(-4deg); }
+	0%,100% { -moz-transform: rotate(0deg); }
+}
+
+@-o-keyframes link-rotation
+{
+	20% { -o-transform: rotate(4deg); }
+	45% { -o-transform: rotate(-4deg); }
+	0%,100% { -o-transform: rotate(0deg); }
+}
+
+@keyframes link-rotation
+{
+	20% { transform: rotate(4deg); }
+	45% { transform: rotate(-4deg); }
+	0%,100% { transform: rotate(0deg); }
+}
+
+
+.lt-ie9 #balloon-container
+{
+	display:none;
+}
+
+
+.lt-ie9 #initial-play-button
+{
+	display:none;
+}
+
+.lt-ie9 .social_hover
+{
+	display:none;
+}
+
+.lt-ie9 #playerframe
+{
+	display:none;
+}
+
+
+
+.no-js #initially-hidden-content
+{
+	display:block;
+}
+
+.no-js .hide-on-no-js
+{
+	display:none;
+}
+
+
+.no-js .video-on-no-js
+{
+	overflow:visible;
+}
+

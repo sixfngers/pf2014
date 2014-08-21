@@ -10,6 +10,18 @@ $(document).ready(function() {
     jsonObj = data;
 
     _buildTiles(); 
+
+    $(".no-touch .contact-wrapper .icon").hover(
+      function(){
+        console.log(this)
+        $(this).addClass('over');
+        $(this).removeClass('out');
+      },
+      function(){
+        $(this).removeClass('over');
+        $(this).addClass('out');
+      });
+      
     
   });
 
@@ -25,7 +37,7 @@ $(document).ready(function() {
                         '<img class="tile-thumb" src="<%= thumb %>">'+
                       '</div>'+
                       '<div class="lower">'+
-                        '<div class="project-roles ital-sm"><%= roles %></div>'+
+                        '<div class="project-roles ital-sm"><br /></div>'+
                         '<div class="project-title bold-lg"><%= title %></div>'+
                         '<div class="project-media ital-sm"><%= media %></div>'+
                       '</div>'+
@@ -52,8 +64,8 @@ $(document).ready(function() {
       {
           projectTemplate = {
             pid : projectListObj[projectObj].project_id,
+            title : projectListObj[projectObj].title,
             thumb : projectListObj[projectObj].thumb,
-            title : projectListObj[projectObj].project_id,
             roles : projectListObj[projectObj].roles,
             media : projectListObj[projectObj].type,
             link : projectListObj[projectObj].live_link
@@ -71,7 +83,7 @@ $(document).ready(function() {
 
           if(projectTemplate.link.length == 0)
           {
-            console.log($('#'+tile.id+' .project-link').addClass('hidden'));
+            $('#'+tile.id+' .project-link').addClass('hidden');
           }
             // tile.children('.project-link').addClass('hidden');
 
@@ -131,13 +143,18 @@ $(document).ready(function() {
 
     hideHeaderText(project);
 
-    $("#full_title").text(projectDetail.title);
-    $("#full_description").text(projectDetail.description);
+    $("#full_title").html(projectDetail.title);
+    $("#full_description").html(projectDetail.description);
 
-    $("role-list").text(projectDetail.roles);
-    $("tech-list").text(projectDetail.tech);
+    $(".role-list").html(project.roles);
+    $(".tech-list").html(project.tech);
 
     // $(".header-bg-image").attr('src', project.header_image);
+
+    if(projectid == 'david')
+    {
+      //todo include contact template
+    }
 
     setupCarousel(projectDetail.images);
   }
@@ -219,7 +236,8 @@ $(document).ready(function() {
       obj.image = jsonObj.header.sets[random].image;
       obj.bw_filter = jsonObj.header.sets[random].bw_filter;
       obj.text = jsonObj.header.sets[random].text;
-      obj.color = jsonObj.header.sets[random].color;
+      obj.textColor = jsonObj.header.sets[random].header_text_color;
+      obj.fill_color = jsonObj.header.sets[random].color;
       obj.opacity = jsonObj.header.sets[random].opacity;
       obj.text_width = jsonObj.header.sets[random].text_width;
     }
@@ -228,15 +246,18 @@ $(document).ready(function() {
       obj.image = updatedTextObj.header_image;
       obj.bw_filter = false;
       obj.text = updatedTextObj.header_text;
-      obj.color = updatedTextObj.header_fill;
+      obj.textColor = updatedTextObj.header_text_color;
+      obj.fill_color = updatedTextObj.header_fill;
       obj.opacity = updatedTextObj.header_fill_opacity;
       obj.text_width = updatedTextObj.header_text_width;
     }
 
     console.log(obj)
     
-    TweenMax.to($("#header-text"), .3, {css:{autoAlpha:0, display:'none'}, onComplete:showHeaderText, onCompleteParams:[obj]});
-    TweenMax.to($("#bg-image"), .3, {css:{autoAlpha:0}});
+    
+    TweenMax.to($("#header-text"), .3, {css:{opacity:0}, onComplete:showHeaderText, onCompleteParams:[obj]});
+    TweenMax.to($("#bg-image"), .3, {css:{opacity:0}});
+    TweenMax.to($(".fill-overlay"), .3, {css:{opacity:0}});
   }
 
   var showHeaderText = function(updatedTextObj)
@@ -245,6 +266,9 @@ $(document).ready(function() {
 
     $("#header-text").text(updatedTextObj.text);
     $(".header-text-wrapper").css("width", updatedTextObj.text_width);
+    $(".header-text-wrapper").css("color", updatedTextObj.textColor);
+
+    $(".fill-overlay").css("background-color", updatedTextObj.fill_color);
     
     if(updatedTextObj.bw_filter)
     {
@@ -257,9 +281,9 @@ $(document).ready(function() {
     
     $(".header-bg-image").attr('src', updatedTextObj.image);
     
-    TweenMax.to($("#header-text"), .3, {css:{autoAlpha:1, display:'block'}});
-    TweenMax.to($(".fill-overlay"), .5, {css:{autoAlpha:updatedTextObj.opacity}, delay:.3});
-    TweenMax.to($("#bg-image"), .5, {css:{autoAlpha:1}, delay:.3});
+    TweenMax.to($("#header-text"), .3, {css:{opacity:1, display:'block'}, delay:.5});
+    TweenMax.to($(".fill-overlay"), .5, {css:{opacity:updatedTextObj.opacity}, delay:.3});
+    TweenMax.to($("#bg-image"), .5, {css:{opacity:1}, delay:.3});
   }
 
   var addGrayscaleFilter = function()
